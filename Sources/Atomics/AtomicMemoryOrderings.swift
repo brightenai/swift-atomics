@@ -10,7 +10,11 @@
 //
 //===----------------------------------------------------------------------===//
 
-import _AtomicsShims
+#if BRIGHTENTOOLS
+import Atomics.CAtomics
+#else
+import CAtomics
+#endif
 
 /// Specifies the memory ordering semantics of an atomic load operation.
 @frozen

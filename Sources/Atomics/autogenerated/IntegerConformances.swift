@@ -17,7 +17,11 @@
 // #############################################################################
 
 
-import _AtomicsShims
+#if BRIGHTENTOOLS
+import Atomics.CAtomics
+#else
+import CAtomics
+#endif
 
 extension Int: AtomicValue {
   @frozen

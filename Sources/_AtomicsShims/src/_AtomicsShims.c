@@ -10,7 +10,7 @@
 //
 //===----------------------------------------------------------------------===//
 
-#include "_AtomicsShims.h"
+#include "AtomicsShims.h"
 
 #if ENABLE_DOUBLEWIDE_ATOMICS
 // FIXME: These should be static inline header-only shims, but Swift 5.3 doesn't
@@ -19,13 +19,13 @@
 
 void _sa_retain_n(void *object, uint32_t n)
 {
-  extern void *swift_retain_n(void *object, uint32_t n);
-  swift_retain_n(object, n);
+//  extern void *swift_retain_n(void *object, uint32_t n);
+//  swift_retain_n(object, n);
 }
 
 void _sa_release_n(void *object, uint32_t n)
 {
-  extern void swift_release_n(void *object, uint32_t n);
-  swift_release_n(object, n);
+//  extern void swift_release_n(void *object, uint32_t n);
+//  swift_release_n(object, n);
 }
 #endif

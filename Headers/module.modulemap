@@ -1,4 +1,4 @@
-module Atomics {
+framework module Atomics {
     export *
     explicit module CAtomics {
         header "AtomicsShims.h"

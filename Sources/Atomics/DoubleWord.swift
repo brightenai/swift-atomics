@@ -10,9 +10,14 @@
 //
 //===----------------------------------------------------------------------===//
 
-import _AtomicsShims
+#if BRIGHTENTOOLS
+import Atomics.CAtomics
+//public typealias DoubleWord = Atomics._AtomicsShims.DoubleWord
+#else
+import CAtomics
+//public typealias DoubleWord = _AtomicsShims.DoubleWord
+#endif
 
-public typealias DoubleWord = _AtomicsShims.DoubleWord
 
 extension DoubleWord {
   /// Initialize a new `DoubleWord` value given its high- and

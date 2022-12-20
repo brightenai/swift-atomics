@@ -10,7 +10,11 @@
 //
 //===----------------------------------------------------------------------===//
 
-import _AtomicsShims
+#if BRIGHTENTOOLS
+import Atomics.CAtomics
+#else
+import CAtomics
+#endif
 
 // Double-wide atomic primitives on x86_64 CPUs aren't available by default
 // on Linux distributions, and we cannot currently enable them automatically.
@@ -38,11 +42,11 @@ internal var _concurrencyWindow: Int { 20 }
 
 extension Unmanaged {
   internal func retain(by delta: Int) {
-    _sa_retain_n(toOpaque(), UInt32(delta))
+//    _sa_retain_n(toOpaque(), UInt32(delta))
   }
 
   internal func release(by delta: Int) {
-    _sa_release_n(toOpaque(), UInt32(delta))
+//    _sa_release_n(toOpaque(), UInt32(delta))
   }
 }
 
