@@ -18,14 +18,15 @@ let package = Package(
   products: [
     .library(
       name: "Atomics",
-      targets: ["Atomics"]),
+      targets: ["CAtomics","Atomics"]),
   ],
   targets: [
     .target(
       name: "CAtomics",
       exclude: [
         "CMakeLists.txt"
-      ]
+      ],
+      path: "CSources"),
     ),
     .target(
       name: "Atomics",

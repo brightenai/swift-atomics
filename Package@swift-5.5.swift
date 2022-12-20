@@ -18,18 +18,19 @@ let package = Package(
   products: [
     .library(
       name: "Atomics",
-      targets: ["Atomics"]),
+      targets: ["CAtomics","Atomics"]),
   ],
   targets: [
     .target(
-      name: "_AtomicsShims",
+      name: "CAtomics",
+      path: "CSources",
       exclude: [
         "CMakeLists.txt"
       ]
     ),
     .target(
       name: "Atomics",
-      dependencies: ["_AtomicsShims"],
+      dependencies: ["CAtomics"],
       exclude: [
         "CMakeLists.txt",
         "HighLevelTypes.swift.gyb",
