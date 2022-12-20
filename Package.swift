@@ -22,14 +22,14 @@ let package = Package(
   ],
   targets: [
     .target(
-      name: "_AtomicsShims",
+      name: "CAtomics",
       exclude: [
         "CMakeLists.txt"
       ]
     ),
     .target(
       name: "Atomics",
-      dependencies: ["_AtomicsShims"],
+      dependencies: ["CAtomics"],
       exclude: [
         "CMakeLists.txt",
         "Atomics.docc",
