@@ -80,6 +80,8 @@ extension UnsafeAtomic: @unchecked Sendable where Value: Sendable {}
 /// A reference type holding an atomic value, with automatic memory management.
 @_fixed_layout
 public class ManagedAtomic<Value: AtomicValue> {
+    public let beef:Int = 0xDEADBEEF    // must be first so it can be looked up simply in native
+
   @usableFromInline
   internal var _storage: Value.AtomicRepresentation
 
