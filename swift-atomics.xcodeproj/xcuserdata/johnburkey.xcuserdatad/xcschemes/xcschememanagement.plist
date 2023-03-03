@@ -6,13 +6,17 @@
 	<dict>
 		<key>Atomics.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
-			<integer>162</integer>
+			<integer>94</integer>
 		</dict>
 		<key>swift-atomics-Package.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
-			<integer>161</integer>
+			<integer>93</integer>
 		</dict>
 		<key>swift-atomicsPackageDescription.xcscheme_^#shared#^_</key>
 		<dict>
