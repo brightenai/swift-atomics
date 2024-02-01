@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "target": "aarch64-unknown-linux-android24",
+    "toolchain-bin-dir": "/Users/johnburkey/brightenTools/swift-5.7-android-aarch64-24-sdk/usr/bin",
+    "sdk": "/Users/johnburkey/Library/Android/sdk/ndk/25.1.8937393/android-ndk-r25b/toolchains/llvm/prebuilt/darwin-x86_64/sysroot",
+    "dynamic-library-extension": "so",
+   "extra-cc-flags": [
+        "-fPIC",        
+        "-I/Users/Users/johnburkey/Library/Android/sdk/ndk/25.1.8937393/android-ndk-r25b/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/include",
+        "-I/Users/johnburkey/Library/Android/sdk/ndk/25.1.8937393/android-ndk-r25b/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/aarch64-linux-android",
+        "-I/Users/johnburkey/brightenTools/swift-5.7-android-aarch64-24-sdk/usr/lib/swift",
+     ],
+    "extra-swiftc-flags": [
+        "-resource-dir", "/Users/johnburkey/brightenTools/swift-5.7-android-aarch64-24-sdk/usr/lib/swift",
+        "-tools-directory", "/Users/johnburkey/Library/Android/sdk/ndk/25.1.8937393/android-ndk-r25b/toolchains/llvm/prebuilt/darwin-x86_64/bin",
+        "-I/Users/johnburkey/Library/Android/sdk/ndk/25.1.8937393/android-ndk-r25b/toolchains/llvm/prebuilt/darwin-x86_64/lib64/clang/14.0.6/include",
+           ],
+    "extra-cpp-flags":
+    [
+    "-lstdc++", 
+    ]
+}
